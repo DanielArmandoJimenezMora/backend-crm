@@ -7,10 +7,7 @@
     "node": "14.17.4"
     },
     "scripts": {
-      "start": "serve -s build",
-      "build": "react-scripts build",
-      "eject": "react-scripts eject",
-      "heroku-postbuild": "npm run build"
+      "start": "serve -s build"
     },
   "author": "Phi Developer",
   "license": "ISC",
