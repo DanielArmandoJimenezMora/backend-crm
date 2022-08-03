@@ -6,9 +6,10 @@
   "engines": {
     "node": "14.17.4"
     },
-    "scripts": {
-      "start": "serve -s build"
-    },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon ."
+  },
   "author": "Phi Developer",
   "license": "ISC",
   "dependencies": {
