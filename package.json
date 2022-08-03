@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Software gestor de ventas",
   "main": "index.js",
+  "engines": {
+    "node": "14.17.4"
+    },
   "scripts": {
-    "start": "node .",
+    "start": "node index.js",
     "dev": "nodemon ."
   },
   "author": "Phi Developer",
@@ -26,3 +29,5 @@
     "nodemon": "^2.0.16"
   }
 }
+
+
