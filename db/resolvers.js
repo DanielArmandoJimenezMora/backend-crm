@@ -140,15 +140,17 @@ const resolvers = {
       }
 
       // Solo quien lo creo puede verlo
-      if (pedido.vendedor.toString() !== ctx.usuario.id) {
+      /* if (pedido.vendedor.toString() !== ctx.usuario.id) {
         throw new Error("Acción no autorizada");
-      }
+      } */
 
       // Retornar el resultado
       return pedido;
     },
     obtenerPedidosEstado: async (_, { estado }, ctx) => {
-      const pedidos = await Pedido.find({ vendedor: ctx.usuario.id, estado });
+      const pedidos = await Pedido.find({
+        /* vendedor: ctx.usuario.id, */ estado,
+      });
       return pedidos;
     },
     mejoresClientes: async () => {
@@ -485,10 +487,10 @@ const resolvers = {
       }
 
       // Verificar si el cliente existe
-      const existeCliente = await Cliente.findById(cliente);
+      /* const existeCliente = await Cliente.findById(cliente);
       if (!existeCliente) {
         throw new Error("El cliente no existe");
-      }
+      } */
 
       // Si el cliente y pedido  pertenece al vendedor
       /* if (existeCliente.vendedor.toString() !== ctx.usuario.id) {
